@@ -672,6 +672,18 @@ nav a:hover::after {
     color: var(--color-texto);
     transform: translateY(-3px);
 }
+/* ... dentro de la sección de CONTACTO en style.css ... */
+
+.contact-item a {
+    color: var(--color-texto-claro);
+    text-decoration: none;
+    word-break: break-all; /* Ayuda a que el email no se desborde en pantallas pequeñas */
+}
+
+.contact-item a:hover {
+    color: var(--color-destacado);
+    text-decoration: underline;
+}
 
 /* =================================================================
    FOOTER
