@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     top: targetElement.offsetTop - offset,
                     behavior: 'smooth'
                 });
-                // Cierra el menú móvil si está abierto al hacer clic en un enlace
                 if (navUl.classList.contains('active')) {
                     navUl.classList.remove('active');
                 }
@@ -38,32 +37,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Ventana Modal (Formulario) ---
     const modal = document.getElementById('form-modal');
-    const openModalBtns = document.querySelectorAll('#open-form, #open-form-from-calc');
-    const closeModalBtn = document.getElementById('close-modal');
-
     if (modal) {
-        openModalBtns.forEach(btn => btn.addEventListener('click', () => {
+        const openModalBtns = document.querySelectorAll('#open-form, #open-form-from-calc');
+        const closeModalBtn = document.getElementById('close-modal');
+
+        const openModal = () => {
             modal.style.display = 'flex';
             document.body.style.overflow = 'hidden';
-        }));
+        };
 
-        closeModalBtn.addEventListener('click', () => {
+        const closeModal = () => {
             modal.style.display = 'none';
             document.body.style.overflow = 'auto';
-        });
+        };
 
+        openModalBtns.forEach(btn => btn.addEventListener('click', openModal));
+        closeModalBtn.addEventListener('click', closeModal);
         window.addEventListener('click', e => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
+            if (e.target === modal) closeModal();
         });
-
         document.addEventListener('keydown', e => {
-            if (e.key === 'Escape' && modal.style.display === 'flex') {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
+            if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
         });
     }
 
@@ -93,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const pricePerKg = 240;
                 const totalPrice = weight * pricePerKg;
                 calculatedPriceSpan.textContent = totalPrice.toFixed(2);
-                resultContainer.style.display = 'block';
+                resultContainer.classList.remove('hidden'); // Usamos la clase en vez de style
                 resultContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
             } else {
                 alert('Por favor, introduce un peso válido.');
@@ -101,30 +95,49 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Funcionalidad para el Cambio de Tema (Modo Oscuro) con Memoria ---
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        const body = document.body;
+        const icon = themeToggle.querySelector('i');
+        const sunIcon = 'fa-sun';
+        const moonIcon = 'fa-moon';
+
+        // Función para aplicar el tema guardado al cargar la página
+        const applySavedTheme = () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                body.setAttribute('data-theme', 'dark');
+                icon.classList.remove(moonIcon);
+                icon.classList.add(sunIcon);
+            } else {
+                body.removeAttribute('data-theme');
+                icon.classList.remove(sunIcon);
+                icon.classList.add(moonIcon);
+            }
+        };
+
+        themeToggle.addEventListener('click', () => {
+            const isDark = body.toggleAttribute('data-theme');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light'); // Guarda la preferencia
+            
+            // Cambiar el icono
+            if (isDark) {
+                icon.classList.remove(moonIcon);
+                icon.classList.add(sunIcon);
+            } else {
+                icon.classList.remove(sunIcon);
+                icon.classList.add(moonIcon);
+            }
+        });
+
+        // Aplicar el tema al cargar la página
+        applySavedTheme();
+    }
+
     // --- Año del Copyright Dinámico ---
     const yearSpan = document.getElementById('current-year');
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
-});
-
-    // --- Funcionalidad para el Cambio de Tema (Modo Oscuro) ---
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
-    const moonIcon = 'fa-moon';
-    const sunIcon = 'fa-sun';
-
-    themeToggle.addEventListener('click', () => {
-        body.toggleAttribute('data-theme');
-        const icon = themeToggle.querySelector('i');
-        
-        // Cambiar el icono
-        if (body.hasAttribute('data-theme')) {
-            icon.classList.remove(moonIcon);
-            icon.classList.add(sunIcon);
-        } else {
-            icon.classList.remove(sunIcon);
-            icon.classList.add(moonIcon);
-        }
-    });
 });
