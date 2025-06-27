@@ -20,9 +20,7 @@
             <a href="#" class="logo">
                 <img src="images/logo.png" alt="Rumba Express Logo">
             </a>
-            <button class="mobile-toggle" aria-label="Abrir menú">
-                <i class="fas fa-bars"></i>
-            </button>
+            
             <nav>
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
@@ -33,6 +31,15 @@
                     <li><a href="#contacto" class="btn btn-secondary">Contacto</a></li>
                 </ul>
             </nav>
+
+            <div class="header-controls">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-toggle" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -48,16 +55,6 @@
                 </div>
             </div>
         </section>
-
-            <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
-                <i class="fas fa-moon"></i>
-            </button>
-
-            <button class="mobile-toggle" aria-label="Abrir menú">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </header>
         
         <div class="modal" id="form-modal">
             <div class="modal-content">
@@ -135,36 +132,9 @@
                     <p>Experiencias reales de personas que han confiado en nuestro servicio</p>
                 </div>
                 <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <div class="testimonial-text">"¡Increíble servicio! Mi paquete llegó a Santa Clara en solo 8 días. Precio justo y atención personalizada en todo momento."</div>
-                        <div class="testimonial-author">
-                            <div class="author-avatar"><i class="fas fa-user"></i></div>
-                            <div class="author-info">
-                                <h4>María López</h4>
-                                <p>Monterrey</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-text">"Después de malas experiencias con otros servicios, Rumba Express ha sido un alivio. Atención humana y precios transparentes. ¡Totalmente recomendado!"</div>
-                        <div class="testimonial-author">
-                            <div class="author-avatar"><i class="fas fa-user"></i></div>
-                            <div class="author-info">
-                                <h4>Carlos Rodríguez</h4>
-                                <p>Guanajuato</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-text">"La facilidad de recogida en Matehuala y el seguimiento constante me dieron tranquilidad. Mis paquetes siempre llegan completos y en buen estado."</div>
-                        <div class="testimonial-author">
-                            <div class="author-avatar"><i class="fas fa-user"></i></div>
-                            <div class="author-info">
-                                <h4>Laura Martínez</h4>
-                                <p>Matehuala</p>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="testimonial-card"><div class="testimonial-text">"¡Increíble servicio! Mi paquete llegó a Santa Clara en solo 8 días. Precio justo y atención personalizada en todo momento."</div><div class="testimonial-author"><div class="author-avatar"><i class="fas fa-user"></i></div><div class="author-info"><h4>María López</h4><p>Monterrey</p></div></div></div>
+                    <div class="testimonial-card"><div class="testimonial-text">"Después de malas experiencias con otros servicios, Rumba Express ha sido un alivio. Atención humana y precios transparentes. ¡Totalmente recomendado!"</div><div class="testimonial-author"><div class="author-avatar"><i class="fas fa-user"></i></div><div class="author-info"><h4>Carlos Rodríguez</h4><p>Guanajuato</p></div></div></div>
+                    <div class="testimonial-card"><div class="testimonial-text">"La facilidad de recogida en Matehuala y el seguimiento constante me dieron tranquilidad. Mis paquetes siempre llegan completos y en buen estado."</div><div class="testimonial-author"><div class="author-avatar"><i class="fas fa-user"></i></div><div class="author-info"><h4>Laura Martínez</h4><p>Matehuala</p></div></div></div>
                 </div>
             </div>
         </section>
@@ -176,84 +146,39 @@
                     <p>Aprende a optimizar tus envíos con nuestros consejos expertos</p>
                 </div>
                 <div class="blog-grid">
-                    <div class="blog-card">
-                        <div class="blog-image" style="background-image: url('images/blog1.webp');"></div>
-                        <div class="blog-content">
-                            <div class="blog-date">28 de marzo de 2024</div>
-                            <h3>Cómo empacar medicamentos de forma segura</h3>
-                            <div class="expandable-content" id="blog-content-1"><p>¿Vas a enviar medicamentos a Cuba y quieres que lleguen sanos y salvos? Aquí te contamos cómo hacerlo bien, sin enredos ni dolores de cabeza con la aduana.</p><h4>✅ ¿Qué medicamentos puedes enviar?</h4><ul><li>Medicamentos genéricos (no de marca).</li><li>Tabletas y frascos bien sellados.</li><li>Máximo para tres meses de tratamiento.</li><li><b>Importante:</b> Nada de medicamentos controlados o inyectables.</li></ul><h4>📦 Consejos para empacarlos bien</h4><ul><li>Asegúrate de que el empaque original esté sellado.</li><li>Si es frasco, protégelo con papel burbuja o un paño.</li><li>Si llevas varios, sepáralos en una bolsita identificada.</li></ul><h4>⚠️ Lo que debes evitar</h4><p>Medicamentos sueltos, enviar más de tres meses de tratamiento o productos que parezcan sustancias controladas.</p></div>
-                            <button type="button" class="btn btn-secondary toggle-btn" data-target="blog-content-1">Leer más</button>
-                            <a href="https://chat.whatsapp.com/L5qfxSYlEXOCQYqlVaKAX7?mode=r_t" target="_blank" class="btn btn-primary cta-btn">¿Dudas? Escríbenos</a>
-                        </div>
-                    </div>
-                    <div class="blog-card">
-                        <div class="blog-image" style="background-image: url('images/blog2.webp');"></div>
-                        <div class="blog-content">
-                            <div class="blog-date">15 de marzo de 2024</div>
-                            <h3>Haz que quepa más sin pagar de más</h3>
-                             <div class="expandable-content" id="blog-content-2"><p>En Rumba Express sabemos que cada centímetro cuenta. Aquí van nuestros mejores consejos para que tu paquete sea compacto, ordenado y más barato.</p><h4>🎯 Cómo aprovechar al máximo el espacio</h4><ul><li>Usa maletas o cajas compactas y firmes.</li><li>Agrupa tus artículos por categoría: medicamentos, alimentos, aseo.</li><li>Usa bolsas al vacío para ropa si puedes.</li><li>Etiqueta todo con tu nombre y el tipo de artículo.</li></ul><h4>🛠 ¿Y si no sabes empacar?</h4><p>No pasa nada. Ofrecemos asesoría gratuita y servicio de reempaque profesional. ¡Nosotros lo dejamos listo para volar!</p></div>
-                            <button type="button" class="btn btn-secondary toggle-btn" data-target="blog-content-2">Leer más</button>
-                            <a href="https://chat.whatsapp.com/L5qfxSYlEXOCQYqlVaKAX7?mode=r_t" target="_blank" class="btn btn-primary cta-btn">Pide Asesoría Gratis</a>
-                        </div>
-                    </div>
-                    <div class="blog-card">
-                        <div class="blog-image" style="background-image: url('images/blog3.webp');"></div>
-                        <div class="blog-content">
-                            <div class="blog-date">27 de junio de 2025</div>
-                            <h3>¿Cómo envío con Rumba Express?</h3>
-                             <div class="expandable-content" id="blog-content-3"><p>Tranquilo, esto es fácil y lo hacemos contigo paso a paso. Sin enredos, sin letras pequeñas, sin estrés.</p><h4>Paso 1: Escríbenos por WhatsApp</h4><p>Todas nuestras redes te llevan a WhatsApp para darte atención personalizada.</p><h4>Paso 2: Danos los datos</h4><p>Nombre y contacto (tuyo y del receptor), qué envías y cuánto pesa.</p><h4>Paso 3: Entrega el paquete</h4><p>Puedes traerlo a nuestros puntos (Morelia, Matehuala, Guanajuato, Monterrey), coordinar un punto intermedio o mandarlo por paquetería.</p><h4>Paso 4: El paquete vuela</h4><p>Hacemos un envío mensual. Te avisamos la fecha y al día siguiente está en La Habana, listo para repartir a provincia.</p><h4>Paso 5: Seguimiento y acompañamiento</h4><p>Mantenemos comunicación continua contigo y con el receptor. Siempre sabrás dónde está tu envío.</p></div>
-                            <button type="button" class="btn btn-secondary toggle-btn" data-target="blog-content-3">Leer más</button>
-                            <a href="https://chat.whatsapp.com/L5qfxSYlEXOCQYqlVaKAX7?mode=r_t" target="_blank" class="btn btn-primary cta-btn">Inicia tu Envío</a>
-                        </div>
-                    </div>
-                    <div class="blog-card">
-                        <div class="blog-image" style="background-image: url('images/blog4.webp');"></div>
-                        <div class="blog-content">
-                            <div class="blog-date">27 de junio de 2025</div>
-                            <h3>¿Qué puedes (y qué no) mandar a Cuba?</h3>
-                             <div class="expandable-content" id="blog-content-4"><p>Esta guía no es teoría de aduana, es nuestra práctica diaria. Porque una buena paquetería lleva confianza.</p><h4>✅ Lo que SÍ puedes mandar</h4><p>Ropa, calzado, aseo, alimentos no perecederos, tecnología pequeña y artículos de uso personal. No mandes cantidades que parezcan para reventa.</p><h4>❌ Lo que NO se puede mandar</h4><p>Productos perecederos, electrodomésticos grandes, productos peligrosos o inflamables, armas (ni de juguete) o artículos en estado dudoso.</p><h4>🤝 ¿Dudas?</h4><p>Te asesoramos antes de mandar y revisamos contigo. Queremos que tu paquete llegue completo y sin drama.</p></div>
-                            <button type="button" class="btn btn-secondary toggle-btn" data-target="blog-content-4">Leer más</button>
-                            <a href="https://chat.whatsapp.com/L5qfxSYlEXOCQYqlVaKAX7?mode=r_t" target="_blank" class="btn btn-primary cta-btn">Consulta con un Agente</a>
-                        </div>
-                    </div>
+                    <div class="blog-card"><div class="blog-image" style="background-image: url('images/blog1.webp');"></div><div class="blog-content"><div class="blog-date">28 de marzo de 2024</div><h3>Cómo empacar medicamentos de forma segura</h3><div class="expandable-content" id="blog-content-1"><p>¿Vas a enviar medicamentos a Cuba y quieres que lleguen sanos y salvos? Aquí te contamos cómo hacerlo bien, sin enredos ni dolores de cabeza con la aduana.</p><h4>✅ ¿Qué medicamentos puedes enviar?</h4><ul><li>Medicamentos genéricos (no de marca).</li><li>Tabletas y frascos bien sellados.</li><li>Máximo para tres meses de tratamiento.</li><li><b>Importante:</b> Nada de medicamentos controlados o inyectables.</li></ul><h4>📦 Consejos para empacarlos bien</h4><ul><li>Asegúrate de que el empaque original esté sellado.</li><li>Si es frasco, protégelo con papel burbuja o un paño.</li><li>Si llevas varios, sepáralos en una bolsita identificada.</li></ul><h4>⚠️ Lo que debes evitar</h4><p>Medicamentos sueltos, enviar más de tres meses de tratamiento o productos que parezcan sustancias controladas.</p></div><div class="blog-buttons"><button type="button" class="btn btn-secondary toggle-btn" data-target="blog-content-1">Leer más</button><a href="https://chat.whatsapp.com/L5qfxSYlEXOCQYqlVaKAX7?mode=r_t" target="_blank" class="btn btn-primary cta-btn">¿Dudas? Escríbenos</a></div></div></div>
+                    <div class="blog-card"><div class="blog-image" style="background-image: url('images/blog2.webp');"></div><div class="blog-content"><div class="blog-date">15 de marzo de 2024</div><h3>Haz que quepa más sin pagar de más</h3><div class="expandable-content" id="blog-content-2"><p>En Rumba Express sabemos que cada centímetro cuenta. Aquí van nuestros mejores consejos para que tu paquete sea compacto, ordenado y más barato.</p><h4>🎯 Cómo aprovechar al máximo el espacio</h4><ul><li>Usa maletas o cajas compactas y firmes.</li><li>Agrupa tus artículos por categoría: medicamentos, alimentos, aseo.</li><li>Usa bolsas al vacío para ropa si puedes.</li><li>Etiqueta todo con tu nombre y el tipo de artículo.</li></ul><h4>🛠 ¿Y si no sabes empacar?</h4><p>No pasa nada. Ofrecemos asesoría gratuita y servicio de reempaque profesional. ¡Nosotros lo dejamos listo para volar!</p></div><div class="blog-buttons"><button type="button" class="btn btn-secondary toggle-btn" data-target="blog-content-2">Leer más</button><a href="https://chat.whatsapp.com/L5qfxSYlEXOCQYqlVaKAX7?mode=r_t" target="_blank" class="btn btn-primary cta-btn">Pide Asesoría Gratis</a></div></div></div>
+                    <div class="blog-card"><div class="blog-image" style="background-image: url('images/blog3.webp');"></div><div class="blog-content"><div class="blog-date">27 de junio de 2025</div><h3>¿Cómo envío con Rumba Express?</h3><div class="expandable-content" id="blog-content-3"><p>Tranquilo, esto es fácil y lo hacemos contigo paso a paso. Sin enredos, sin letras pequeñas, sin estrés.</p><h4>Paso 1: Escríbenos por WhatsApp</h4><p>Todas nuestras redes te llevan a WhatsApp para darte atención personalizada.</p><h4>Paso 2: Danos los datos</h4><p>Nombre y contacto (tuyo y del receptor), qué envías y cuánto pesa.</p><h4>Paso 3: Entrega el paquete</h4><p>Puedes traerlo a nuestros puntos (Morelia, Matehuala, Guanajuato, Monterrey), coordinar un punto intermedio o mandarlo por paquetería.</p><h4>Paso 4: El paquete vuela</h4><p>Hacemos un envío mensual. Te avisamos la fecha y al día siguiente está en La Habana, listo para repartir a provincia.</p><h4>Paso 5: Seguimiento y acompañamiento</h4><p>Mantenemos comunicación continua contigo y con el receptor. Siempre sabrás dónde está tu envío.</p></div><div class="blog-buttons"><button type="button" class="btn btn-secondary toggle-btn" data-target="blog-content-3">Leer más</button><a href="https://chat.whatsapp.com/L5qfxSYlEXOCQYqlVaKAX7?mode=r_t" target="_blank" class="btn btn-primary cta-btn">Inicia tu Envío</a></div></div></div>
+                    <div class="blog-card"><div class="blog-image" style="background-image: url('images/blog4.webp');"></div><div class="blog-content"><div class="blog-date">27 de junio de 2025</div><h3>¿Qué puedes (y qué no) mandar a Cuba?</h3><div class="expandable-content" id="blog-content-4"><p>Esta guía no es teoría de aduana, es nuestra práctica diaria. Porque una buena paquetería lleva confianza.</p><h4>✅ Lo que SÍ puedes mandar</h4><p>Ropa, calzado, aseo, alimentos no perecederos, tecnología pequeña y artículos de uso personal. No mandes cantidades que parezcan para reventa.</p><h4>❌ Lo que NO se puede mandar</h4><p>Productos perecederos, electrodomésticos grandes, productos peligrosos o inflamables, armas (ni de juguete) o artículos en estado dudoso.</p><h4>🤝 ¿Dudas?</h4><p>Te asesoramos antes de mandar y revisamos contigo. Queremos que tu paquete llegue completo y sin drama.</p></div><div class="blog-buttons"><button type="button" class="btn btn-secondary toggle-btn" data-target="blog-content-4">Leer más</button><a href="https://chat.whatsapp.com/L5qfxSYlEXOCQYqlVaKAX7?mode=r_t" target="_blank" class="btn btn-primary cta-btn">Consulta con un Agente</a></div></div></div>
                 </div>
             </div>
         </section>
 
-               <section class="contact" id="contacto">
+        <section class="contact" id="contacto">
             <div class="container contact-container">
                 <div class="contact-info">
                     <h2>Contáctanos</h2>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
-                        <div>
-                            <h4>Teléfono</h4>
-                            <a href="tel:+528186805891">+52 81 8680 5891</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
-                        <div>
-                            <h4>WhatsApp</h4>
-                             <a href="https://chat.whatsapp.com/L5qfxSYlEXOCQYqlVaKAX7?mode=r_t" target="_blank">+52 55 1701 2057</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                        <div>
-                            <h4>Email</h4>
-                            <a href="mailto:rumba_express@outlook.com">rumba_express@outlook.com</a>
-                        </div>
-                    </div>
-
-                </main>
+                    <div class="contact-item"><div class="contact-icon"><i class="fas fa-phone-alt"></i></div><div><h4>Teléfono</h4><a href="tel:+528186805891">+52 81 8680 5891</a></div></div>
+                    <div class="contact-item"><div class="contact-icon"><i class="fab fa-whatsapp"></i></div><div><h4>WhatsApp</h4><a href="https://chat.whatsapp.com/L5qfxSYlEXOCQYqlVaKAX7?mode=r_t" target="_blank">+52 55 1701 2057</a></div></div>
+                    <div class="contact-item"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div><h4>Email</h4><a href="mailto:rumba_express@outlook.com">rumba_express@outlook.com</a></div></div>
+                </div>
+                <div class="contact-info">
+                    <h2>Horarios de atención</h2>
+                    <div class="contact-item"><div class="contact-icon"><i class="far fa-clock"></i></div><div><h4>Lunes a Viernes</h4><p>9:00 am - 7:00 pm</p></div></div>
+                    <div class="contact-item"><div class="contact-icon"><i class="far fa-clock"></i></div><div><h4>Sábados</h4><p>10:00 am - 2:00 pm</p></div></div>
+                    <div class="contact-item"><div class="contact-icon"><i class="far fa-clock"></i></div><div><h4>Domingos</h4><p>Cerrado</p></div></div>
+                     <div class="contact-item"><div class="contact-icon"><i class="fas fa-info-circle"></i></div><div><h4>Soporte</h4><a href="mailto:rumba_express@outlook.com">rumba_express@outlook.com</a></div></div>
+                </div>
+            </div>
+        </section>
+    </main>
     
     <footer>
         <div class="container footer-container">
             <div class="footer-links">
                 <a href="#" class="footer-logo">Rumba<span>Express</span></a>
                 <p>Tu conexión directa y personal para envíos a Cuba desde México. Más rápido, más lejos, mejor precio.</p>
-                <div class="social-links" style="margin-top: 20px;">
+                <div class="social-links">
                     <a href="https://www.facebook.com/share/1AbESiBcUd/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/rumba_express_?igsh=OWdxamhia2lsbDl2" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     <a href="https://x.com/rumba_express_?t=kY1u8WmrSXO-ljzKhJ75xQ&s=09" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
