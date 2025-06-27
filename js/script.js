@@ -107,3 +107,24 @@ document.addEventListener('DOMContentLoaded', () => {
         yearSpan.textContent = new Date().getFullYear();
     }
 });
+
+    // --- Funcionalidad para el Cambio de Tema (Modo Oscuro) ---
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    const moonIcon = 'fa-moon';
+    const sunIcon = 'fa-sun';
+
+    themeToggle.addEventListener('click', () => {
+        body.toggleAttribute('data-theme');
+        const icon = themeToggle.querySelector('i');
+        
+        // Cambiar el icono
+        if (body.hasAttribute('data-theme')) {
+            icon.classList.remove(moonIcon);
+            icon.classList.add(sunIcon);
+        } else {
+            icon.classList.remove(sunIcon);
+            icon.classList.add(moonIcon);
+        }
+    });
+});
