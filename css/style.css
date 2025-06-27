@@ -684,7 +684,9 @@ nav a:hover::after {
     color: var(--color-destacado);
     text-decoration: underline;
 }
-
+.contact-item a[href^="tel:"] {
+    color: var(--color-texto-claro);
+    text-decoration: none;
 /* =================================================================
    FOOTER
    ================================================================= */
