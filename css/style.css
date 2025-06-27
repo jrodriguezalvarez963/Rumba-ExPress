@@ -854,3 +854,7 @@ footer {
         justify-content: center;
     }
 }
+[data-theme='dark'] .price-display {
+    color: var(--color-texto-claro);
+}
+
