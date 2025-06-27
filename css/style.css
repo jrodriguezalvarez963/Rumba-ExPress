@@ -23,17 +23,20 @@
     --fuente-parrafos: 'Open Sans', sans-serif;
 }
 
-/* Aquí prepararemos el terreno para el Modo Oscuro más adelante */
-/* [data-theme='dark'] {
+/* ... en la sección de VARIABLES ... */
+
+/* [data-theme='dark'] { ... } */  <-- ¡QUITA ESTE!
+
+[data-theme='dark'] {
     --color-primario: #FF6A00;  
     --color-acento: #FFB100;    
     --color-destacado: #FF6A00; 
     --color-fondo: #013A4C;      
     --color-bordes: #1D3557;     
-    --color-texto: var(--color-texto-claro);
+    --color-texto: #FAFAFA;
     --color-fondo-secundario: #023040;
 }
-*/
+
 
 /* =================================================================
    RESETEO Y ESTILOS GENERALES
