@@ -235,7 +235,15 @@ nav a:hover::after {
     color: var(--color-primario);
     cursor: pointer;
 }
-
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: var(--color-primario);
+    cursor: pointer;
+    margin-left: 20px;
+}
+ 
 /* =================================================================
    HERO SECTION
    ================================================================= */
