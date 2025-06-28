@@ -858,3 +858,10 @@ footer {
     color: var(--color-texto-claro);
 }
 
+.form-confirmation p {
+    color: var(--color-destacado); /* Usamos el color amarillo para que resalte */
+    font-weight: 600;
+    text-align: center;
+    padding: 20px 0;
+}
+
