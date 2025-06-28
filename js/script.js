@@ -141,3 +141,41 @@ document.addEventListener('DOMContentLoaded', () => {
         yearSpan.textContent = new Date().getFullYear();
     }
 });
+
+    // --- Envío del Formulario de Suscripción con AJAX (Fetch) ---
+    const subscriptionForm = document.querySelector('.subscription-form');
+
+    if (subscriptionForm) {
+        subscriptionForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Previene que la página se recargue
+
+            const form = e.target;
+            const formData = new FormData(form);
+            const action = form.action;
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            
+            // Muestra un estado de "cargando" en el botón
+            submitButton.disabled = true;
+            submitButton.textContent = 'Enviando...';
+
+            fetch(action, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors' // Importante para evitar errores de CORS con Make.com
+            })
+            .then(response => {
+                // Oculta el formulario y muestra el mensaje de éxito
+                form.querySelector('.form-elements').style.display = 'none';
+                form.querySelector('.form-confirmation').style.display = 'block';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Hubo un error al enviar tu suscripción. Por favor, inténtalo de nuevo.');
+                // Restaura el botón si hay un error
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            });
+        });
+    }
+ 
